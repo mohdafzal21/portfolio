@@ -1,0 +1,36 @@
+.segmentWidth {
+
+    width: max-content;
+}
+
+.gitHub {
+
+    background-color: black !important;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 0 !important;
+}
+
+.belowTitle {
+
+    margin-top: 0px !important;
+}
+
+.inLine > div {
+
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.updated {
+
+    margin-left: 20px;
+}
+
+.gitCircle {
+
+    background: #f00;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}

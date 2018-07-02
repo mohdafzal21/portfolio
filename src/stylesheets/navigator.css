@@ -1,0 +1,9 @@
+.navDiv {
+
+    margin-top: 2rem;
+}
+
+.navDiv div{
+
+    background-color: transparent !important;
+}
