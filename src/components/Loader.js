@@ -1,5 +1,11 @@
+const loader = {
+
+    width: '345px',
+    height: '50px'
+}
+
 const Loader = () =>
-    <div>
+    <div style={loader}>
         <div className="ui active inverted dimmer">
             <div className="ui text loader">Loading</div>
         </div>

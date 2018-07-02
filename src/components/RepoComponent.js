@@ -15,12 +15,12 @@ const RepoComponent = ({name, html_url, updated_at, language}) => {
     }
 
     return (
-        <div className="ui segment">
-            <h3>{name}</h3>
+        <div className={`ui segment ${styles.repoWidth}`}>
+            <a href={html_url}><h3>{name}</h3></a>
             <div className={styles.inLine}>
                 <div style={gitCircle}/>
                 <div className={`column`}>{language}</div>
-                <div className={`column ${styles.updated}`}>{updateDate.toLocaleDateString()}</div>
+                <div className={`column ${styles.updated}`}>Last Updated at {updateDate.toLocaleDateString()}</div>
             </div>
         </div>
     )

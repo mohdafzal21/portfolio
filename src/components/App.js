@@ -1,27 +1,32 @@
-import {PageMe, PageAbout} from "./PageTemplate";
+import {PageMe, PageAbout} from "./PageTemplate"
+import Navigator from './Navigator'
 import {Component} from 'react'
-import PropTypes from 'prop-types'
-import GitHubFeed from './GitHubFeed'
 
 class App extends Component {
 
-    // getChildContext() {
-    //     return {
-    //         store: this.props.store
-    //     }
-    // }
+    state = {
 
-    render(){
+        activeNav: 'me'
+    }
 
-        return(
-            <GitHubFeed/>
+    pages = {
+
+        me: <PageMe/>,
+        'my stuff': <PageAbout/>
+    }
+
+    changeTab = tab => this.setState(tab)
+
+    render() {
+
+        return (
+
+            <div>
+                <Navigator changeTab={tab => this.changeTab({activeNav: tab})} active={this.state.activeNav}/>
+                {this.pages[this.state.activeNav]}
+            </div>
         )
     }
 }
-
-// App.childContextTypes = {
-//
-//     store: PropTypes.object.isRequired
-// }
 
 export default App

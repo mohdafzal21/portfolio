@@ -3,18 +3,26 @@ import Face from './Face'
 import ShortInfo from './ShortInfo'
 import MyJourney from './MyJourney'
 import MyWork from './MyWork'
-
-const PageTemplate = ({children}) =>
-    <div>
-        <Navigator/>
-        {children}
-    </div>
+import GitHubFeed from "./GitHubFeed"
+import Competitions from './Competitions'
+import styleHome from '../stylesheets/home.css'
 
 export const PageMe = () =>
-    <PageTemplate>
-        <Face/>
-        <ShortInfo/>
-    </PageTemplate>
+    <div className={styleHome.home}>
+        <div className={`ui three column doubling stackable grid container`}>
+            <div className={`column`}>
+                <Face/>
+                <ShortInfo/>
+            </div>
+            <div className={`column`}>
+                <MyJourney/>
+            </div>
+            <div className={`column`}>
+                <Competitions/>
+            </div>
+        </div>
+    </div>
+
 
 const styles = {
 
@@ -22,14 +30,13 @@ const styles = {
 }
 
 export const PageAbout = () =>
-    <PageTemplate>
-        <div className={`ui three column doubling stackable grid container`} style={styles}>
-            <div className={`column`}>
-                <MyJourney/>
-            </div>
-            <div className={`column`}>
-                <MyWork/>
-            </div>
+    <div className={`ui three column doubling stackable grid container`} style={styles}>
+        <div className={`column`}>
+            <GitHubFeed/>
         </div>
-    </PageTemplate>
+        <div className={`column`}>
+            <MyWork/>
+        </div>
+    </div>
+
 

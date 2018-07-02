@@ -5,6 +5,7 @@
 
 .gitHub {
 
+    width: 376px;
     background-color: black !important;
     border-radius: 5px;
     padding: 5px;
@@ -25,4 +26,9 @@
 .updated {
 
     margin-left: 20px;
+}
+
+.repoWidth {
+
+    width: 345px;
 }

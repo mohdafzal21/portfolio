@@ -24,7 +24,7 @@ export default class GitHubFeed extends Component {
                     this.repoData.push({name, html_url, updated_at, language})
                 })
 
-                this.setState({repoData: this.repoData})
+                setTimeout(() => this.setState({repoData: this.repoData}), 1000)
             })
     }
 
@@ -32,10 +32,10 @@ export default class GitHubFeed extends Component {
 
         return (
             <div>
-                <div className={`ui raised text segment container ${styles.gitHub}`}>
+                <div className={`ui raised text segment ${styles.gitHub} ${styles.segmentWidth}`}>
                     <a className={`ui header inverted`}><img src='../../data/github-logo.png'/> GitHub Repos</a>
                 </div>
-                <div className={`ui raised text very padded segment container ${styles.belowTitle}`}>
+                <div className={`ui raised text segment ${styles.belowTitle} ${styles.segmentWidth}`}>
                     {!this.state.repoData ?
                         <Loader/> :
                         this.state.repoData.map((item, ind) => <RepoComponent key={ind} {...item}/>)}

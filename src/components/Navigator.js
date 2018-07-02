@@ -1,20 +1,13 @@
 import style from '../stylesheets/navigator.css'
 
-const Navigator = () =>
+const tabsL = ['Me', 'My Stuff', 'Blogs']
+const tabsR = ['Contact']
+
+const Navigator = ({changeTab, active}) =>
     <div className={`${style.navDiv} ui container`}>
         <div className="ui secondary pointing menu">
-            <a className="active item">
-                Me
-            </a>
-            <a className="item">
-                About
-            </a>
-            <a className="item">
-                Work
-            </a>
-            <a className="item right floated">
-                Contact
-            </a>
+            {tabsL.map((item, ind) => <a key={ind} onClick={() => changeTab(item.toLowerCase())} className={`item ` + (active === item.toLowerCase() ? 'active' : '')}>{item}</a>)}
+            {tabsR.map((item, ind) => <a key={ind} onClick={() => changeTab(item.toLowerCase())} className={`item right floated ` + (active === item.toLowerCase() ? 'active' : '')}>{item}</a>)}
         </div>
     </div>
 
