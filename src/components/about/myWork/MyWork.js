@@ -1,5 +1,5 @@
-import {workinfo} from "../../data/aboutData";
-import styles from '../stylesheets/aboutMe.css'
+import {workinfo} from "../../../../data/aboutData";
+import styles from '../../../stylesheets/aboutMe.css'
 import WorkCards from './WorkCards'
 
 const MyWork = () =>

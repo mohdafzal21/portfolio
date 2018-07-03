@@ -1,11 +1,12 @@
 import Navigator from './Navigator'
-import Face from './Face'
-import ShortInfo from './ShortInfo'
-import MyJourney from './MyJourney'
-import MyWork from './MyWork'
-import GitHubFeed from "./GitHubFeed"
-import Competitions from './Competitions'
+import Face from './home/Face'
+import ShortInfo from './home/ShortInfo'
+import MyJourney from './home/journey/MyJourney'
+import MyWork from './about/myWork/MyWork'
+import GitHubFeed from "./about/github/GitHubFeed"
+import Competitions from './home/competition/Competitions'
 import styleHome from '../stylesheets/home.css'
+import Contact from './Contact'
 
 export const PageMe = () =>
     <div className={styleHome.home}>
@@ -39,4 +40,5 @@ export const PageAbout = () =>
         </div>
     </div>
 
-
+export const PageContact = () =>
+    <Contact/>

@@ -16,7 +16,7 @@ export const timelineInfo = [
 export const workinfo = [
     {
         smallImg: 'schedLogo.png',
-        appName: 'Sched',
+        appName: 'Sched Beta',
         bigImg: 'sched.jpg',
         appDesc: 'A simple scheduling web application.'
     },

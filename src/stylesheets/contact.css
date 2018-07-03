@@ -1,0 +1,9 @@
+.segmentForm {
+
+    margin-top: 30px;
+}
+
+.fieldLength input, textarea {
+
+    max-width: 500px;
+}

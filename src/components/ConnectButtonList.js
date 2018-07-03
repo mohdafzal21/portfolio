@@ -1,17 +1,30 @@
 import React from 'react'
-import {Button, Icon} from 'semantic-ui-react'
-import style from '../stylesheets/connectButton.css'
-
 const connectButtons = ['facebook', 'twitter', 'google plus', 'linkedin', 'instagram']
 
+const style = {
+
+    backgroundColor: 'black',
+    height: '40px'
+}
+
+const marginStyle = {
+
+    marginTop: '20px'
+}
+
+const imgStyle = {
+
+    height: '12px'
+}
+
 const ConnectButtonList = () => (
-    <div>
+    <div className={`ui container`} align="center" style={marginStyle}>
         {connectButtons.map((item, ind) =>
-            <Button key={ind} color={item}>
-                <Icon name={item}/> {item}
-            </Button>
+            <button key={ind} className={`ui button ${item}`}>
+                <i className={`${item} icon`}/> {item}
+            </button>
         )}
-        <a className="github-button gitBut" href="https://github.com/ntkme" data-size="large" aria-label="Follow @ntkme on GitHub">Follow @ntkme</a>
+        <a href={`https://github.com/umaniax`}><button style={style} className="ui button inverted" data-size="large" aria-label="Follow @umaniax on GitHub"><img style={imgStyle} src={`../../data/github-logo.png`}/> Follow @umaniax</button></a>
     </div>
 )
 

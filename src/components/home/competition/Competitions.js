@@ -1,5 +1,5 @@
-import {competitions} from '../../data/aboutData'
-import styles from '../stylesheets/aboutMe.css'
+import {competitions} from '../../../../data/aboutData'
+import styles from '../../../stylesheets/aboutMe.css'
 import CompCards from './CompCards'
 
 const Competitions = () =>

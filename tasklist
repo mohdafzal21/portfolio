@@ -1,6 +1,6 @@
 []
 
-1) Nav Tabs
+//Nav Tabs
     about me
     -> experience presently at (BTECH 4th year)
     -> my work
@@ -9,4 +9,6 @@
     connect
     -> connect
 
-2) Cache GitHub repos
+//Cache GitHub repos
+
+-> add about link in sched app redirecting to portfolio

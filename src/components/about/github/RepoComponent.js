@@ -1,4 +1,4 @@
-import styles from '../stylesheets/aboutMe.css'
+import styles from '../../../stylesheets/aboutMe.css'
 
 const randomColor = () => '#' + [...Array(6)].map(() => parseInt(Math.random() * 16).toString(16)).join('')
 

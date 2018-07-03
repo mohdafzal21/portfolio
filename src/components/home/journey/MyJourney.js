@@ -1,6 +1,6 @@
 import TimeLineCards from './TimeLineCards'
-import {timelineInfo} from '../../data/aboutData'
-import styles from '../stylesheets/aboutMe.css'
+import {timelineInfo} from '../../../../data/aboutData'
+import styles from '../../../stylesheets/aboutMe.css'
 
 const MyJourney = () =>
     <div className={`ui raised very padded text segment ${styles.segmentWidth}`}>
