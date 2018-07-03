@@ -6,7 +6,7 @@ import MyWork from './about/myWork/MyWork'
 import GitHubFeed from "./about/github/GitHubFeed"
 import Competitions from './home/competition/Competitions'
 import styleHome from '../stylesheets/home.css'
-import Contact from './Contact'
+import Contact from './contact/Contact'
 
 export const PageMe = () =>
     <div className={styleHome.home}>

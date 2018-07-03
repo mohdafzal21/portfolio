@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
-import styles from '../stylesheets/contact.css'
+import styles from '../../stylesheets/contact.css'
 import axios from 'axios'
-import {keys} from '../keys'
+import {keys} from '../../keys'
 
 export default class FormForContact extends Component {
 

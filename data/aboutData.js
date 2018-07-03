@@ -18,13 +18,45 @@ export const workinfo = [
         smallImg: 'schedLogo.png',
         appName: 'Sched Beta',
         bigImg: 'sched.jpg',
-        appDesc: 'A simple scheduling web application.'
+        appDesc: 'A simple scheduling web application.',
+        tech: [
+            {
+                type: 'jQuery',
+                img: 'JQuery-logo.png'
+            },
+            {
+                type: 'Mongo DB',
+                img: 'mongo.png'
+            },
+            {
+                type: 'Express JS',
+                img: 'express.png'
+            },
+            {
+                type: 'Semantic UI',
+                img: 'semantic.png'
+            }
+        ]
     },
     {
-        smallImg: 'schedLogo.png',
+        smallImg: 'me.jpg',
         appName: 'My Portfolio',
-        bigImg: 'sched.jpg',
-        appDesc: 'Get to know me better :)'
+        bigImg: 'portfolio.jpg',
+        appDesc: 'Get to know me better :)',
+        tech: [
+            {
+                type: 'jQuery',
+                img: 'JQuery-logo.png'
+            },
+            {
+                type: 'React JS',
+                img: 'react.png'
+            },
+            {
+                type: 'Semantic UI',
+                img: 'semantic.png'
+            }
+        ]
     }
 ]
 
