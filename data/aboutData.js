@@ -19,6 +19,7 @@ export const workinfo = [
         appName: 'Sched Beta',
         bigImg: 'sched.jpg',
         appDesc: 'A simple scheduling web application.',
+        site: 'https://schedapp.herokuapp.com',
         tech: [
             {
                 type: 'jQuery',
@@ -43,6 +44,7 @@ export const workinfo = [
         appName: 'My Portfolio',
         bigImg: 'portfolio.jpg',
         appDesc: 'Get to know me better :)',
+        site: 'https://umangpahwa.herokuapp.com',
         tech: [
             {
                 type: 'jQuery',

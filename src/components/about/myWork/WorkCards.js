@@ -6,7 +6,7 @@ const styles = {
 }
 
 const dimIt = appName => $(`.${appName}.ui.dimmer`).dimmer('show')
-const WorkCards = ({smallImg, appName, bigImg, appDesc, tech}) =>
+const WorkCards = ({smallImg, appName, bigImg, appDesc, tech, site}) =>
     <div className={`column`}>
         <div className="ui card">
             <div className="content">
@@ -23,9 +23,9 @@ const WorkCards = ({smallImg, appName, bigImg, appDesc, tech}) =>
                 <button className="ui secondary button dim-but" onClick={() => dimIt(appName.replace(/\s/g, ''))}>
                     View Tech
                 </button>
-                <button className="ui secondary button">
+                <a href={site}><button className="ui secondary button">
                     Go To App
-                </button>
+                </button></a>
             </div>
         </div>
         <div className={`${appName.replace(/\s/g, '')} ui dimmer`}>

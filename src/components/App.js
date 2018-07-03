@@ -1,24 +1,36 @@
-import {PageMe, PageAbout, PageContact} from "./PageTemplate"
+import {PageMe, PageMyStuff, PageContact} from "./PageTemplate"
 import Navigator from './Navigator'
 import {Component} from 'react'
+import {HashRouter, Route, Switch, Redirect} from 'react-router-dom'
 
 class App extends Component {
 
-    state = {
+    PageArr = [
+        {
+            page: PageMyStuff,
+            route: '/mystuff'
+        },
+        {
+            page: PageContact,
+            route: '/contact'
+        }
+    ]
 
-        activeNav: 'me'
-    }
+    // state = {
+    //
+    //     activeNav: 'me'
+    // }
 
-    pages = {
+    // pages = {
+    //
+    //     me: <PageMe/>,
+    //     'my stuff': <PageAbout/>,
+    //     contact: <PageContact/>
+    // }
 
-        me: <PageMe/>,
-        'my stuff': <PageAbout/>,
-        contact: <PageContact/>
-    }
+    // changeTab = tab => this.setState(tab)
 
-    changeTab = tab => this.setState(tab)
-
-    componentWillMount(){
+    componentWillMount() {
 
         localStorage['repo-data'] = ''
     }
@@ -26,11 +38,15 @@ class App extends Component {
     render() {
 
         return (
-
-            <div>
-                <Navigator changeTab={tab => this.changeTab({activeNav: tab})} active={this.state.activeNav}/>
-                {this.pages[this.state.activeNav]}
-            </div>
+            <HashRouter>
+                <div>
+                    <Navigator/>
+                    <Switch>
+                        <Route exact path='/' component={PageMe}/>
+                        {this.PageArr.map((item, ind) => <Route key={ind} path={item.route} component={item.page}/>)}
+                    </Switch>
+                </div>
+            </HashRouter>
         )
     }
 }

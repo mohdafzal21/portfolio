@@ -30,7 +30,7 @@ const styles = {
     margin: '10px'
 }
 
-export const PageAbout = () =>
+export const PageMyStuff = () =>
     <div className={`ui three column doubling stackable grid container`} style={styles}>
         <div className={`column`}>
             <GitHubFeed/>
